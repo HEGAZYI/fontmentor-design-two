@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway;
+    
+}
+:root {
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --progress-bar: linear-gradient(to right, hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+    --white:#fff;
+}
+.main{
+    background-color: var(--very-dark-blue);
+    position: relative;
+    height: 100vh;
+}
+.background{
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+.text{
+    position: absolute;
+    padding: 2.5rem;
+    padding-right: 7rem;
+    background-color: var(--dark-blue);
+    left: 20%;
+    top: 25%;
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+    border-top-right-radius: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+} 
+
+div.text .img2{
+    background-color:var(--very-dark-blue) ;
+    padding: 0.3rem;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+div.tap{
+    background-color:  var(--dark-blue);
+    position: absolute;
+    right: 20%;
+    top: 28%;
+    border-radius: 5px;
+    width: 500px;
+    height: 150px;
+} 
+.input{
+    position:absolute;
+    left: 25px;
+    bottom: 55px;
+    color: var(--white);
+}
+.input1{
+    width: 450px;
+    height: 10px;
+    outline: none;
+    border:none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color:hsl(229, 57%, 11%);
+}
+.input2{
+    width: 351px;
+    height: 10px;
+    outline: none;
+    border:none;
+    border-radius: .6rem;
+    position: absolute;
+    top: 24px;
+    right: 22%;
+    background: var(--progress-bar);
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 23px;
+    right: 22%;
+}
+.p1{
+    position: absolute;
+    top: 40px;
+    left: 0%;
+}
+.p2{
+    position: absolute;
+    top: 40px;
+    right: 0%;
+}
+.box{
+    position: absolute;
+    top: 22%;
+    right: 22%;
+    width: 10rem;
+    height: 4.5rem;
+    background-color: var(--white);
+    border-radius: .6rem;
+    border-bottom-right-radius: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.box::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 23px;
+    right: 0;
+    bottom: -23px;
+    clip-path: polygon(101% 0%, 48% 0%, 101% 100% );
+    background-color: var(--white);
+}
+@media screen and (max-width:500px) {
+    .background{
+        width: 550px;
+        height: 100vh; 
+    }
+    
+    div.text{
+        position: absolute;
+        left:10%;
+        top: 30%;
+        width: 300px;
+    }
+    div.tap{
+        position: absolute;
+        right: calc(10%);
+        top: 60%;
+        border-radius: 5px;
+        width: 300px;
+        height: 150px;
+    } 
+    .box{
+        position: absolute;
+        top: 76%;
+        right: 25%;
+        width: 10rem;
+        height: 4.5rem;
+        border-radius: .6rem;
+    }
+    .box::before{
+        display: none;
+    } 
+
+    .input{
+        position: absolute;
+        top: 20px;
+        left: 10%;
+    
+    }
+    .input1,.input2,span,.p1,.p2{
+        margin-top:10px;
+    }
+    .input1{
+        width: 250px;
+        position: absolute;
+        top: 24px;
+        left: 0%;
+    }
+    .input2{
+        width: 200px;
+        position: absolute;
+        top: 24px;
+        left: 0%;
+    } 
+}
+
+
